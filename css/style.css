@@ -3,7 +3,7 @@
 }
 
 body {
-
+  background-color: rgba(100, 100, 100, .7)
 }
 
 header {
@@ -12,6 +12,7 @@ header {
   background-color: rgba(45, 45, 45, .7);
   align-items: center;
   justify-content: space-between;
+  height: 5em;
 }
 .nav-bar {
   padding: none;
@@ -49,6 +50,7 @@ footer {
   padding-left: .5em;
   padding-right: .5em;
 }
+
 .outside-link {
   list-style: none;
 
