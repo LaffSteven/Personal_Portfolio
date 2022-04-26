@@ -7,9 +7,33 @@ body {
 }
 
 header {
-
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(45, 45, 45, .7);
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 5em;
+}
+.nav-bar {
+  padding: none;
+}
+#main-nav {
+  display: inline-flex;
+  align-self: flex-start;
+}
+#right-nav {
+  display: inline-flex;
+  align-self: baseline;
+}
+.nav-bar-link {
+  padding-right: 1em;
+  list-style: none;
+}
+.nav-bar-link a {
+  text-decoration: none;
+  color: white;
 }
 
 footer {
-  
+
 }
