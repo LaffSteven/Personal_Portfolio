@@ -1,7 +1,7 @@
 /****************************** general ******************************/
 
 * {
-
+  /* outline: 1px solid black; */
 }
 
 body {
@@ -10,24 +10,96 @@ body {
 
 /****************************** section ******************************/
 
+#upper-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 10em;
+  width: 50%;
+  margin-bottom: 5em;
+}
+#upper-section h1 {
+  padding-left: 5em;
+  align-self: flex-start;
+}
+
+/* sections of the carousel css are borrowed from or inspired by the Corgi Carousel*/
 #carousel-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  margin-bottom: 5em;
 }
 
-.carousel-project-container {
-  width: 50%;
+.project-carousel-container {
+  align-self: center;
+  width: 75%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .carousel-projects {
+  align-self: center;
   width: 80%;
+  min-height: 300px;
   background: rgba(105, 90, 202, 1);
   padding: .5em;
   box-sizing: border-box;
   box-shadow: 2px, 2px, #f2cd99;
+  display: flex;
+}
+
+.carousel-projects img {
+  width: 33%;
+  border-radius: 10px;
+  /* display: none; */
+}
+
+.carousel-button previous{
+}
+.carousel-button next{
+}
+
+#lower-section {
+  margin: 0 auto;
+  width: 75%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.lower-section-block {
+  max-width: 25%;
+  align-self: center;
+}
+.featured-project {
+  max-width: 100%;
+}
+.featured-project img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.lower-section-label {
+  max-width: 100%;
+  background-color: rgba(150, 150, 150, 1);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.about-steven {
+  max-width: 100%;
+}
+.about-steven img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
@@ -58,7 +130,9 @@ header {
   list-style: none;
 }
 .nav-bar-link a {
+  display: flex;
   text-decoration: none;
+  justify-content: center;
   color: white;
 }
 
@@ -95,9 +169,15 @@ footer {
 #social-links {
   display: inline-flex;
   align-self: center;
+  padding: 0;
+}
+#github {
+  padding: 0;
 }
 #other-links {
   align-self: baseline;
+  padding-left: 0;
+  padding-right: 3em;
 }
 #holding-pen {
   display: none;
