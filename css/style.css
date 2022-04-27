@@ -43,7 +43,7 @@ body {
 #upper-section {
   margin: 3em;
   max-height: : 5em;
-  max-width: 20em;
+  max-width: 30em;
   background: rgba( 200, 200, 200, 0.5 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
