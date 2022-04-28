@@ -1,0 +1,47 @@
+#info-section {
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  align-self: center;
+}
+
+#picture-card {
+  background: rgba( 200, 200, 200, 0.5 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 1em;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 1em;
+  transform: translate(25%);
+}
+.card img {
+  border-radius: 1em;
+}
+
+#about-blurb {
+  padding: 1em;
+}
+
+.text-box {
+  max-width: 50%;
+  background: rgba( 200, 200, 200, 0.7 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 1em;
+}
+
+h2 {
+  font-size: 24;
+}
+p {
+  font-size: 18;
+}
