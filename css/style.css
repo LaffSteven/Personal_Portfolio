@@ -193,6 +193,7 @@ body {
   text-decoration: none;
   color: white;
   text-align: center;
+  margin: 1em;
 }
 
 .lower-section-block img {
@@ -200,8 +201,15 @@ body {
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
+  margin: 1em;
 }
 
+#project-container {
+  justify-content: flex-start;
+}
+#project-container h2 {
+  margin: auto;
+}
 
 /****************************** header ******************************/
 
