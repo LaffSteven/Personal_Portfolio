@@ -5,8 +5,10 @@
 }
 
 body {
-  background-color: rgba(100, 100, 100, .7)
+  background-color: rgba(100, 100, 100, .7);
+  overflow: auto;
 }
+
 
 .section-container {
   display: flex;
@@ -256,11 +258,11 @@ header {
 footer {
   display: flex;
   flex-direction: row;
-  background-color: rgba(45, 45, 45, .7);
+  background-color: rgba(45, 45, 45, 1);
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  bottom: 1em;
+  bottom: 0;
   width: 99%;
   margin: auto;
 }
@@ -280,6 +282,10 @@ footer {
 #copyright-container {
   display: inline-flex;
   align-self: flex-start;
+}
+#copright-container p {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 #social-links {
   display: inline-flex;
