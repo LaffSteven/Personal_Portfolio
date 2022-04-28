@@ -204,6 +204,13 @@ body {
   margin: 1em;
 }
 
+#about-icon {
+  object-fit: fill;
+}
+#contact-icon {
+  object-fit: fill;
+}
+
 #project-container {
   justify-content: flex-start;
 }
