@@ -9,6 +9,8 @@ const hideModal = () => {
   $('.contact-modal').hide();
 }
 
+
+
 const goToHome = (url) => {
   $(location).attr('href', 'index.html');
 }
@@ -26,8 +28,8 @@ const goToAbout = (url) => {
 ////////////////////////////////////////////////////////////////////////////////
 $(() => {
 
-  $('#contact').on('click', showModal);
-  $('#contact-conatiner').on('click', showModal);
+  $('.contact').on('click', showModal);
+  // $('#contact-conatiner').on('click', showModal);
   $('#close-button').on('click', hideModal);
 
 
