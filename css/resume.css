@@ -1,58 +1,59 @@
-* {
-  /* border: 1px solid black; */
-}
+@media (min-width: 600px) {
+  * {
+    /* border: 1px solid black; */
+  }
 
-body, html {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-body {
-  flex-shrink: 0;
-}
+  body {
+    flex-shrink: 0;
+  }
 
-#resume-section {
-  margin: 1.5em;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 85%;
-  padding: 0;
-}
+  #resume-section {
+    margin: 1.5em;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 85%;
+    padding: 0;
+  }
 
-#resume-container {
-  align-self: center;
-  width: 75%;
-  min-height: 750px;
-  flex: 1;
-  background: rgba( 200, 200, 200, 0.5 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
-  border-radius: 1em;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  display: flex;
-  flex-direction: column;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
+  #resume-container {
+    align-self: center;
+    width: 75%;
+    min-height: 750px;
+    flex: 1;
+    background: rgba( 200, 200, 200, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1em;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
 
-.resume-block {
-  align-self: center;
-}
+  .resume-block {
+    align-self: center;
+  }
 
-#resume-header {
-  text-align: center;
-}
+  #resume-header {
+    text-align: center;
+  }
 
-iframe {
-  border-radius: 1em;
-  flex-grow: 4;
-  max-width: 90%;
-}
+  iframe {
+    border-radius: 1em;
+    flex-grow: 4;
+    max-width: 90%;
+  }
 
-@media screen and (max-width: 600px) {
+
 
 }

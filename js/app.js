@@ -1,9 +1,9 @@
 
-const showModal = () => {
-  $('.contact-modal').show('slow');
+const showContactModal = () => {
+  $('#contact-modal').show('slow');
 }
-const hideModal = () => {
-  $('.contact-modal').hide('slow');
+const hideContactModal = () => {
+  $('#contact-modal').hide('slow');
 }
 // Project Page Modals
   // Project Page modal closers
@@ -151,11 +151,15 @@ const fixIndexRange = () => {
 ////////////////////////////////////////////////////////////////////////////////
 $(() => {
 
+  // Home Page Button Listeners
+  $('#project-container').on('click', goToProjects);
+  $('#about-container').on('click', goToAbout);
+
   // Modal Listeners
 
     // Contact Modal Listeners on All Pages
-  $('.contact').on('click', showModal);
-  $('#close-button').on('click', hideModal);
+  $('.contact').on('click', showContactModal);
+  $('.close-modal-button').on('click', hideContactModal);
 
   // Project Modal Listeners on Projects Page
     // project 1
