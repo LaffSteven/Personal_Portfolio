@@ -1,3 +1,36 @@
+/* Sizing for mobile first */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  height: 20%;
+  margin-bottom: 3em;
+}
+.nav-bar {
+  display: none;
+}
+.mobile-nav {
+  position: absolute;
+  top: 0;
+}
+.nav-link-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.menu-button-wrapper {
+
+}
+.menu-button-wrapper h2 {
+  display: inline-block;
+}
+
+
+/* Resize for Desktop if screen wider than  */
 @media (min-width: 600px) {
   /****************************** general ******************************/
 
