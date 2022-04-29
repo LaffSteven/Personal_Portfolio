@@ -26,12 +26,18 @@ header {
 
 }
 .menu-button-wrapper h2 {
+
   display: inline-block;
 }
 
 
 /* Resize for Desktop if screen wider than  */
 @media (min-width: 600px) {
+/****************************** hide mobile only items ******************************/
+  .mobile-nav {
+    display: none;
+  }
+
   /****************************** general ******************************/
 
   * a:link {
