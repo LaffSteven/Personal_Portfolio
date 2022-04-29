@@ -52,3 +52,7 @@ iframe {
   flex-grow: 4;
   max-width: 90%;
 }
+
+@media screen and (max-width: 600px) {
+
+}

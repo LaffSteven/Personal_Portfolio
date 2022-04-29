@@ -135,3 +135,25 @@ p {
 }
 
 /* Project Modals */
+
+@media screen and (max-width: 600px) {
+
+  body {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #uppser-section {
+    margin: 0 auto;
+  }
+
+  #project-article-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
