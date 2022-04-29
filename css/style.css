@@ -1,7 +1,11 @@
 /****************************** general ******************************/
 
-* a:link{
+* a:link {
   text-decoration: none;
+}
+* a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 body, html {
@@ -26,7 +30,7 @@ body {
   border: 1px solid rgba( 255, 255, 255, 0.75 );
 }
 
-.nav-bar-link:hover {
+.lower-section-block:hover {
   box-shadow: 0 16px 32px 0 rgba( 31, 38, 135, 0.6 );
   backdrop-filter: blur( 16px );
   -webkit-backdrop-filter: blur( 16px );
@@ -34,7 +38,7 @@ body {
   border: 1px solid rgba( 255, 255, 255, 0.75 );
 }
 
-.lower-section-block:hover {
+.clickable:hover {
   box-shadow: 0 16px 32px 0 rgba( 31, 38, 135, 0.6 );
   backdrop-filter: blur( 16px );
   -webkit-backdrop-filter: blur( 16px );
@@ -89,6 +93,7 @@ body {
   justify-content: space-between;
 }
 
+
 .project-card {
   width: 33%;
   max-height: 300px;
@@ -99,7 +104,9 @@ body {
   align-items: center;
   display: none;
   border: 1px solid rgba( 255, 255, 255, 0.6 );
+  text-decoration: none;
 }
+
 .project-card img {
   border-radius: 1em;
   max-width: 100%;
@@ -124,13 +131,14 @@ body {
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 50%;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+  margin: .5em;
 }
 .carousel-button:hover{
   box-shadow: 0 16px 32px 0 rgba( 31, 38, 135, 0.6 );
   backdrop-filter: blur( 16px );
   -webkit-backdrop-filter: blur( 16px );
   border-radius: 50%;
-  border: 3px solid rgba( 255, 255, 255, 0.75 );
+  border: 1px solid rgba( 255, 255, 255, 1 );
 }
 
 /* carousel projects background images and text*/

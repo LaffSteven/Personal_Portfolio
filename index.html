@@ -12,19 +12,19 @@
     <header>
 
       <ul class="nav-bar" id="main-nav">
-        <li class="nav-bar-link" class="clickable" id="home">
+        <li class="nav-bar-link" id="home">
           <a href="index.html">
             <img src="/images/home.png" alt="home icon">
             <h3>Home</h3>
           </a>
         </li>
-        <li class="nav-bar-link" class="clickable" id="projects">
+        <li class="nav-bar-link" id="projects">
           <a href="projects.html">
             <img src="/images/projects.png" alt="projects icon">
             <h3>Projects</h3>
           </a>
         </li>
-        <li class="nav-bar-link" class="clickable" id="resume">
+        <li class="nav-bar-link" id="resume">
           <a href="resume.html">
             <img src="/images/resume.png" alt="resume icon">
             <h3>Resume</h3>
@@ -33,7 +33,7 @@
       </ul>
 
       <ul class="nav-bar" id="right-nav">
-        <li class="nav-bar-link"  class="clickable"id="about">
+        <li class="nav-bar-link" id="about">
           <a href="about.html">
             <img src="/images/about.png" alt="about icon">
             <h3>About</h3>
@@ -62,29 +62,19 @@
       </div>
     </div>
 
-      <section id="upper-section">
+    <section id="upper-section">
         <h1 class="page-title">Welcome to Steven Laff's Portfolio Site</h1>
       </section>
 
-      <section id="carousel-section">
+    <section id="carousel-section">
 
-        <div class="project-carousel-container">
-          <div class="carousel-button" id="previous">
-            <img src="/images/previous.png" alt="previous button">
-          </div>
-          <div class="carousel-projects">
-
-          </div>
-
-          <div class="carousel-button" id="next">
-            <img src="/images/next.png" alt="next button">
-          </div>
-
-        </div>
-
-      </section>
-
-      <section id="lower-section">
+      <div class="project-carousel-container">
+        <img class="carousel-button" id="previous" src="/images/previous.png" alt="previous button">
+        <div class="carousel-projects"></div>
+        <img class="carousel-button" id="next" src="/images/next.png" alt="next button">
+      </div>
+    </section>
+    <section id="lower-section">
         <div class="lower-section-block" id="project-container">
           <img src="/images/project_one.png" alt="project one image" id="feature-image">
           <h2 class="lower-section-label" id="featured-project-label">Featured Project</h2>
@@ -100,12 +90,7 @@
           <h2 class="lower-section-label" id="about-steven-label">CONTACT</h2>
         </div>
       </section>
-
-      <span class="spacer"></span>
-
-    </div>
-
-
+    <span class="spacer"></span>
 
   </body>
   <footer id="footer">

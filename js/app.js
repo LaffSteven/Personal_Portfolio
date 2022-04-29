@@ -22,38 +22,59 @@ const goToAbout = (url) => {
   $(location).attr('href', 'about.html');
 }
 
-const $projectOne = $('<div>')
-  .addClass('project-card')
-  .attr('id', 'project-one')
+const $projectOne = $('<a>')
+  .addClass('project-card').addClass('clickable')
+  .attr('id', 'project-one').attr('href', 'projects.html')
   .css('display', 'block')
   .html(`<img src="/images/project_one.png" alt=""> <h2>Project One</h2>`);
-const $projectTwo = $('<div>')
-  .addClass('project-card')
-  .attr('id', 'project-two')
+const $projectTwo = $('<a>')
+  .addClass('project-card').addClass('clickable')
+  .attr('id', 'project-two').attr('href', 'projects.html')
   .css('display', 'block')
   .html(`<img src="/images/project_two.png" alt=""> <h2>Project Two</h2>`);
-const $projectThree = $('<div>')
-  .addClass('project-card')
-  .attr('id', 'project-three')
+const $projectThree = $('<a>')
+  .addClass('project-card').addClass('clickable')
+  .attr('id', 'project-three').attr('href', 'projects.html')
   .css('display', 'block')
   .html(`<img src="/images/project_three.png" alt=""> <h2>Project Three</h2>`);
-const $projectFour = $('<div>')
-  .addClass('project-card')
-  .attr('id', 'project-four')
+const $projectFour = $('<a>')
+  .addClass('project-card').addClass('clickable')
+  .attr('id', 'project-four').attr('href', 'projects.html')
   .css('display', 'block')
   .html(`<img src="/images/project_four.png" alt=""> <h2>Project Four</h2>`);
-const $projectFive = $('<div>')
-  .addClass('project-card')
-  .attr('id', 'project-five')
+const $projectFive = $('<a>')
+  .addClass('project-card').addClass('clickable')
+  .attr('id', 'project-five').attr('href', 'projects.html')
   .css('display', 'block')
   .html(`<img src="/images/project_five.png" alt=""> <h2>Project Five</h2>`);
-const $projectSix = $('<div>')
-  .addClass('project-card')
-  .attr('id', 'project-six')
+const $projectSix = $('<a>')
+  .addClass('project-card').addClass('clickable')
+  .attr('id', 'project-six').attr('href', 'projects.html')
   .css('display', 'block')
   .html(`<img src="/images/project_six.png" alt=""> <h2>Project Six</h2>`);
 
 const projectArray = [$projectOne, $projectTwo, $projectThree, $projectFour, $projectFive, $projectSix];
+
+const numberOfProjects = 5;
+let nextIndex = 3;
+let previousIndex = -1;
+let middleIndex = 0;
+
+
+const fixIndexRange = () => {
+  if (nextIndex < 0) {
+    nextIndex = 5;
+  }
+  if (nextIndex > numberOfProjects) {
+    nextIndex = 0;
+  }
+  if (previousIndex > numberOfProjects) {
+    previousIndex = 0;
+  }
+  if (previousIndex < 0) {
+    previousIndex = 5;
+  }
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -65,26 +86,28 @@ $(() => {
 
   $('.carousel-projects').append($projectOne, $projectTwo, $projectThree);
 
-  const numberOfProjects = 5;
-  let carouselIndex = 3;
-
   $('#next').on('click', () => {
-
-    if (carouselIndex <= numberOfProjects) {
-      $('.carousel-projects').append(projectArray[carouselIndex]);
+    fixIndexRange();
+    if (nextIndex <= numberOfProjects) {
+      $('.carousel-projects').append(projectArray[nextIndex]);
       $('.carousel-projects').children().eq(0).remove();
-      carouselIndex++;
-    } else {
-      carouselIndex = 0;
-      $('.carousel-projects').append(projectArray[carouselIndex]);
-      $('.carousel-projects').children().eq(0).remove();
-      carouselIndex++;
+      nextIndex++;
+      previousIndex++;
     }
-
+    // console.log(`Previous is Project: ${previousIndex + 1}`);
+    // console.log(`Next is Project: ${nextIndex + 1}`);
   })
 
-  $('.previous').on('click', () => {
-
+  $('#previous').on('click', () => {
+    fixIndexRange();
+    if (previousIndex >= 0) {
+      $('.carousel-projects').children().eq(2).remove();
+      $('.carousel-projects').prepend(projectArray[previousIndex]);
+      previousIndex--;
+      nextIndex--;
+    }
+    // console.log(`Previous is Project: ${previousIndex + 1}`);
+    // console.log(`Next is Project: ${nextIndex + 1}`);
   })
 
 
