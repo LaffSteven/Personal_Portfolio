@@ -1,14 +1,82 @@
 
-
-
 const showModal = () => {
   $('.contact-modal').show('slow');
 }
-
 const hideModal = () => {
-  $('.contact-modal').hide();
+  $('.contact-modal').hide('slow');
+}
+// Project Page Modals
+  // Project Page modal closers
+const hideProj1Modal = () => {
+  $('#proj_1_modal').hide();
+}
+const hideProj2Modal = () => {
+  $('#proj_2_modal').hide('medium');
+}
+const hideProj3Modal = () => {
+  $('#proj_3_modal').hide('medium');
+}
+const hideProj4Modal = () => {
+  $('#proj_4_modal').hide('medium');
+}
+const hideProj5Modal = () => {
+  $('#proj_5_modal').hide('medium');
+}
+const hideProj6Modal = () => {
+  $('#proj_6_modal').hide('medium');
+}
+// Project Page modal openers
+const showProj1Modal = () => {
+$('#proj_1_modal').show('medium');
+  hideProj2Modal();
+  hideProj3Modal();
+  hideProj4Modal();
+  hideProj5Modal();
+  hideProj6Modal();
+}
+const showProj2Modal = () => {
+  $('#proj_2_modal').show('medium');
+  hideProj1Modal();
+  hideProj3Modal();
+  hideProj4Modal();
+  hideProj5Modal();
+  hideProj6Modal();
+}
+const showProj3Modal = () => {
+  $('#proj_3_modal').show('medium');
+  hideProj1Modal();
+  hideProj2Modal();
+  hideProj4Modal();
+  hideProj5Modal();
+  hideProj6Modal();
+}
+const showProj4Modal = () => {
+  $('#proj_4_modal').show('medium');
+  hideProj1Modal();
+  hideProj2Modal();
+  hideProj3Modal();
+  hideProj5Modal();
+  hideProj6Modal();
+}
+const showProj5Modal = () => {
+  $('#proj_5_modal').show('medium');
+  hideProj1Modal();
+  hideProj2Modal();
+  hideProj3Modal();
+  hideProj4Modal();
+  hideProj6Modal();
+}
+const showProj6Modal = () => {
+  $('#proj_6_modal').show('medium');
+  hideProj1Modal();
+  hideProj2Modal();
+  hideProj3Modal();
+  hideProj4Modal();
+  hideProj5Modal();
 }
 
+
+// Home Page Navigation Buttons
 const goToHome = (url) => {
   $(location).attr('href', 'index.html');
 }
@@ -22,6 +90,8 @@ const goToAbout = (url) => {
   $(location).attr('href', 'about.html');
 }
 
+
+// Home Page Project Carousel Cards
 const $projectOne = $('<a>')
   .addClass('project-card').addClass('clickable')
   .attr('id', 'project-one').attr('href', 'projects.html')
@@ -53,17 +123,18 @@ const $projectSix = $('<a>')
   .css('display', 'block')
   .html(`<img src="/images/project_six.png" alt=""> <h2>Project Six</h2>`);
 
+
 const projectArray = [$projectOne, $projectTwo, $projectThree, $projectFour, $projectFive, $projectSix];
 
-const numberOfProjects = 5;
+const numberOfProjects = projectArray.length -1;
 let nextIndex = 3;
 let previousIndex = -1;
 let middleIndex = 0;
 
-
+// fix the index range for the project carousel
 const fixIndexRange = () => {
   if (nextIndex < 0) {
-    nextIndex = 5;
+    nextIndex = numberOfProjects;
   }
   if (nextIndex > numberOfProjects) {
     nextIndex = 0;
@@ -72,7 +143,7 @@ const fixIndexRange = () => {
     previousIndex = 0;
   }
   if (previousIndex < 0) {
-    previousIndex = 5;
+    previousIndex = numberOfProjects;
   }
 }
 
@@ -80,12 +151,36 @@ const fixIndexRange = () => {
 ////////////////////////////////////////////////////////////////////////////////
 $(() => {
 
+  // Modal Listeners
+
+    // Contact Modal Listeners on All Pages
   $('.contact').on('click', showModal);
-  // $('#contact-conatiner').on('click', showModal);
   $('#close-button').on('click', hideModal);
 
-  $('.carousel-projects').append($projectOne, $projectTwo, $projectThree);
+  // Project Modal Listeners on Projects Page
+    // project 1
+  $('#proj_1').on('click', showProj1Modal);
+  $('#proj_1_modal_close').on('click', hideProj1Modal);
+    // project 2
+  $('#proj_2').on('click', showProj2Modal);
+  $('#proj_2_modal_close').on('click', hideProj2Modal);
+    // project 3
+  $('#proj_3').on('click', showProj3Modal);
+  $('#proj_3_modal_close').on('click', hideProj3Modal);
+    // project 4
+  $('#proj_4').on('click', showProj4Modal);
+  $('#proj_4_modal_close').on('click', hideProj4Modal);
+    // project 5
+  $('#proj_5').on('click', showProj5Modal);
+  $('#proj_5_modal_close').on('click', hideProj5Modal);
+    // project 6
+  $('#proj_6').on('click', showProj6Modal);
+  $('#proj_6_modal_close').on('click', hideProj6Modal);
 
+
+
+  // Project Carousel on Home Page
+  $('.carousel-projects').append($projectOne, $projectTwo, $projectThree);
   $('#next').on('click', () => {
     fixIndexRange();
     if (nextIndex <= numberOfProjects) {
@@ -97,7 +192,6 @@ $(() => {
     // console.log(`Previous is Project: ${previousIndex + 1}`);
     // console.log(`Next is Project: ${nextIndex + 1}`);
   })
-
   $('#previous').on('click', () => {
     fixIndexRange();
     if (previousIndex >= 0) {
