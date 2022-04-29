@@ -1,6 +1,6 @@
 /* Sizing for mobile first */
 
-body {
+/* body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,7 +28,7 @@ header {
 .menu-button-wrapper h2 {
 
   display: inline-block;
-}
+} */
 
 
 /* Resize for Desktop if screen wider than  */
