@@ -1,4 +1,26 @@
+// mobile declarations
+const toggleMobileNav = () => {
+  $('.mobile-nav-link-wrapper').toggleClass('dispaly-nav-flex');
+}
 
+const $mobileHomeLink = $('<div>').html(
+  `<a href="index.html"><img src="/images/home.png" alt="home icon"></a>`
+).addClass()
+const $mobileProjectsLink = $('<div>').html(
+  `<a href="projects.html"><img src="/images/projects.png" alt="projects icon"></a>`
+)
+const $mobileResumeLink = $('<div>').html(
+  `<a href="resume.html"><img src="/images/resume.png" alt="resume icon"></a>`
+)
+const $mobileAboutLink = $('<div>').html(
+  `<a href="about.html"><img src="/images/about.png" alt="about icon"></a>`
+)
+
+const showMobileNavLinks = () => {
+
+}
+
+// desktop declarations
 const showContactModal = () => {
   $('#contact-modal').show('slow');
 }
@@ -130,6 +152,7 @@ const numberOfProjects = projectArray.length -1;
 let nextIndex = 3;
 let previousIndex = -1;
 let middleIndex = 0;
+let mobileIndex = 4;
 
 // fix the index range for the project carousel
 const fixIndexRange = () => {
@@ -146,6 +169,16 @@ const fixIndexRange = () => {
     previousIndex = numberOfProjects;
   }
 }
+
+// const fixMobileIndex = () => {
+//   if (mobileIndex > numberOfProjects) {
+//     mobileIndex = 0;
+//   }
+//   if (mobileIndex < 0) {
+//     mobileIndex = numberOfProjects;
+//   }
+//   console.log(mobileIndex);
+// }
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -185,6 +218,8 @@ $(() => {
 
   // Project Carousel on Home Page
   $('.carousel-projects').append($projectOne, $projectTwo, $projectThree);
+  // $('.mobile-carousel-projects').append($projectOne);
+
   $('#next').on('click', () => {
     fixIndexRange();
     if (nextIndex <= numberOfProjects) {
@@ -193,8 +228,12 @@ $(() => {
       nextIndex++;
       previousIndex++;
     }
-    // console.log(`Previous is Project: ${previousIndex + 1}`);
-    // console.log(`Next is Project: ${nextIndex + 1}`);
+    // if (mobileIndex <= numberOfProjects) {
+    //   mobileIndex++;
+    //   fixMobileIndex();
+    //   $('.mobile-carousel-projects').append(projectArray[mobileIndex])
+    //   $('.mobile-carousel-projects').children().eq(0).remove();
+    // }
   })
   $('#previous').on('click', () => {
     fixIndexRange();
@@ -204,9 +243,16 @@ $(() => {
       previousIndex--;
       nextIndex--;
     }
-    // console.log(`Previous is Project: ${previousIndex + 1}`);
-    // console.log(`Next is Project: ${nextIndex + 1}`);
+    // if (mobileIndex >= 0) {
+    //   mobileIndex--;
+    //   fixMobileIndex();
+    //   $('.mobile-carousel-projects').append(projectArray[mobileIndex])
+    //   $('.mobile-carousel-projects').children().eq(0).remove();
+    // }
   })
+
+// mobile event listeners
+  $('#mobile-menu-button').on('click', toggleMobileNav);
 
 
 })
