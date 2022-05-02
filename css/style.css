@@ -87,7 +87,7 @@
 /* Resize for Desktop if screen wider than  */
 @media (min-width: 600px) {
 /****************************** hide mobile only items ******************************/
-  .mobile-nav {
+  .mobile-nav-wrapper {
     display: none;
   }
   .mobile-carousel-projects {
