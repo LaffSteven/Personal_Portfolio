@@ -1,13 +1,27 @@
+@font-face {
+  font-family: "Mazzard";
+  src: url('/css/fonts/MazzardM-Medium.otf');
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
 @media (max-width: 599px){
   body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow: visible;
   }
 
   header {
-    height: 15%;
+    align-self: center;
+    position: absolute;
+    top: 0;
+    height: 75px;
+    width: 100%;
     margin-bottom: 3em;
+    background-image: url('/images/nav-bar-background-image.png');
   }
   .nav-bar {
     display: none;
@@ -32,6 +46,17 @@
     display: none;
   }
 
+  #project-article-container {
+    width: 95%;
+  }
+
+  .project-article {
+    max-width: 95%;
+  }
+
+  .article-text-container p{
+    display: none;
+  }
 
 }/* ENDOF MOBILE FORMATTING */
 
@@ -72,6 +97,12 @@
     display: inline-block;
     vertical-align: top;
     padding: .75em;
+  }
+
+  h1  {
+    font-family: 'Mazzard', MazzardM-Medium, sans-serif;
+    font-weight: normal;
+    font-style: normal;
   }
 
   h2 {
@@ -170,6 +201,10 @@
     border-radius: .5em;
     border: 1px solid rgba( 255, 255, 255, 0.75 );
     cursor: pointer;
+  }
+
+  .mobile-project-paragraph {
+    display: none;
   }
 
   /* Project Modals */

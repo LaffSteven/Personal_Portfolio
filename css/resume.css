@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Mazzard";
+  src: url('/css/fonts/MazzardM-Medium.otf');
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
 @media (max-width: 599px){
   body {
     display: flex;

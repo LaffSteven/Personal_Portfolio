@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Mazzard";
+  src: url('/css/fonts/MazzardM-Medium.otf');
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
+
 /* Sizing for mobile first */
 
 @media (max-width: 599px){
@@ -34,7 +44,7 @@
     flex-direction: row;
     margin: .5em;
     flex-wrap: nowrap;
-
+    justify-content: space-between;
   }
   .menu-button-wrapper {
     height: 64px;
@@ -43,7 +53,7 @@
     display: flex;
     flex-direction: column;
     background: rgba( 200, 200, 200, 0.5 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.6 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 5%;
@@ -53,32 +63,28 @@
     object-fit: cover;
   }
   .mobile-link-container {
-    display: none;
-    justify-content: space-around;
-    align-content: flex-end;
+    padding-left: 1em;
     background: rgba( 200, 200, 200, 0.5 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.6 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 5%;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 100%;
-  }
-  .display-nav-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-  }
-  .mobile-nav-link {
-    display: inline-block;
-    height: 100%;
-    width: 64px;
+    height: 64px;
+    display: none;
   }
 
-  .visible-mobile-nav-link {
-    dispaly: inline-block;
-    max-height: 64px;
+  .mobile-nav-link {
+    display: inline-block;
+    margin-left: .5em;
+    margin-right: .5em;
+    height: 52px;
+    width: 52px;
+  }
+  .mobile-nav-link a {
+    max-width: 100%;
+    max-height: 100%;
   }
 
 
@@ -115,6 +121,12 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+  }
+
+  h1  {
+    font-family: 'Mazzard', MazzardM-Medium, sans-serif;
+    font-weight: normal;
+    font-style: normal;
   }
 
   .nav-bar-link:hover {

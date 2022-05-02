@@ -1,7 +1,7 @@
 // mobile declarations
+let mobileNavVisible = false;
 const toggleMobileNav = () => {
-  $('.mobile-link-container').toggleClass('dispaly-nav-flex');
-  $('.mobile-nav-link').toggleClass('visible-mobile-nav-link')
+  $('.mobile-link-container').slideToggle();
 }
 
 const $mobileHomeLink = $('<div>')
@@ -225,12 +225,7 @@ $(() => {
       nextIndex++;
       previousIndex++;
     }
-    // if (mobileIndex <= numberOfProjects) {
-    //   mobileIndex++;
-    //   fixMobileIndex();
-    //   $('.mobile-carousel-projects').append(projectArray[mobileIndex])
-    //   $('.mobile-carousel-projects').children().eq(0).remove();
-    // }
+
   })
   $('#previous').on('click', () => {
     fixIndexRange();
@@ -240,12 +235,7 @@ $(() => {
       previousIndex--;
       nextIndex--;
     }
-    // if (mobileIndex >= 0) {
-    //   mobileIndex--;
-    //   fixMobileIndex();
-    //   $('.mobile-carousel-projects').append(projectArray[mobileIndex])
-    //   $('.mobile-carousel-projects').children().eq(0).remove();
-    // }
+
   })
 
 // apppend mobile nave links to header on pge load
