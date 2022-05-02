@@ -16,6 +16,11 @@ const $mobileResumeLink = $('<div>')
 const $mobileAboutLink = $('<div>').html(`<a href="about.html"><img src="/images/about.png" alt="about icon"></a>`)
   .addClass('mobile-nav-link')
 
+const toggleAboutText = () => {
+  $('#more-about').slideToggle();
+  $('#read-more').toggle();
+  $('#read-less').toggle();
+}
 
 // desktop declarations
 const showContactModal = () => {
@@ -245,6 +250,8 @@ $(() => {
   $mobileAboutLink.appendTo($('.mobile-link-container'));
 // mobile event listeners
   $('#mobile-menu-button').on('click', toggleMobileNav);
+  $('#read-more').on('click', toggleAboutText);
+  $('#read-less').on('click', toggleAboutText);
 
 
 

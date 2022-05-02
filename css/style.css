@@ -18,6 +18,9 @@
 #carousel-section {
   display: none;
 }
+.contact_modal {
+  display: none;
+}
 /**************************** hide desktop only items ****************************/
 
   body {

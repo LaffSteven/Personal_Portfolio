@@ -15,9 +15,9 @@
 
   /**************************** hide desktop only items ****************************/
   body {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
     background-color: rgba(100, 100, 100, .7);
   }
 
@@ -30,12 +30,56 @@
     margin-bottom: 3em;
     background-image: url('/images/nav-bar-background-image.png');
   }
+  .spacer {
+    height: 4.5em;
+  }
 
-
+  #info-section {
+    height: 75%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    flex-shrink: 0;
+  }
+  .text-box h2, h5 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #more-about {
+    display: none;
+  }
+  #read-more, #read-less {
+    max-width: 75px;
+    background: rgba( 200, 200, 200, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  #read-less {
+    display: none;
+  }
+  #picture-card {
+    width: 300px
+    background: rgba( 200, 200, 200, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1em;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 1em;
+  }
+  #picture-card img {
+    max-width: 100%;
+  }
 
 } /* END MOBILE FORMATTING */
 
 @media (min-width: 600px) {
+  /****************************** hide mobile only items ******************************/
+
+  /****************************** hide mobile only items ******************************/
 
   #info-section {
     margin: 0 auto;
@@ -77,7 +121,25 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 1em;
   }
-
+  .text-box h2, h5 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #read-more, #read-less {
+    max-width: 75px;
+    background: rgba( 200, 200, 200, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  #read-less {
+    display: none;
+  }
+  #more-about {
+    display: none;
+  }
   h2 {
     font-size: 24;
   }
