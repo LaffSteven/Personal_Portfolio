@@ -7,6 +7,12 @@
   src: url('/css/fonts/Montserrat-Thin.ttf');
 }
 
+* {
+  font-family: 'Mazzard', MazzardM-Medium, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Sizing for mobile first */
 
@@ -18,7 +24,7 @@
 #carousel-section {
   display: none;
 }
-.contact_modal {
+#contact-modal {
   display: none;
 }
 /**************************** hide desktop only items ****************************/
@@ -90,6 +96,22 @@
     max-height: 100%;
   }
 
+  #upper-section {
+    background: rgba( 200, 200, 200, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1em;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-top: 5em;
+    margin-bottom: 1em;
+  }
+
+  #upper-section h1 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
 
 } /*  End Of Mobile Formatting  */
 
@@ -124,12 +146,6 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-  }
-
-  h1  {
-    font-family: 'Mazzard', MazzardM-Medium, sans-serif;
-    font-weight: normal;
-    font-style: normal;
   }
 
   .nav-bar-link:hover {
@@ -168,7 +184,7 @@
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
+    border-radius: 1em;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     content-align: center;
   }
