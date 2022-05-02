@@ -1,21 +1,20 @@
 // mobile declarations
 const toggleMobileNav = () => {
-  $('.mobile-nav-link-wrapper').toggleClass('dispaly-nav-flex');
+  $('.mobile-link-container').toggleClass('dispaly-nav-flex');
+  $('.mobile-nav-link').toggleClass('visible-mobile-nav-link')
 }
 
-const $mobileHomeLink = $('<div>').html(
-  `<a href="index.html"><img src="/images/home.png" alt="home icon"></a>`
-).addClass()
-const $mobileProjectsLink = $('<div>').html(
-  `<a href="projects.html"><img src="/images/projects.png" alt="projects icon"></a>`
-)
-const $mobileResumeLink = $('<div>').html(
-  `<a href="resume.html"><img src="/images/resume.png" alt="resume icon"></a>`
-)
-const $mobileAboutLink = $('<div>').html(
-  `<a href="about.html"><img src="/images/about.png" alt="about icon"></a>`
-)
-
+const $mobileHomeLink = $('<div>')
+  .html(`<a href="index.html"><img src="/images/home.png" alt="home icon"></a>`)
+  .addClass('mobile-nav-link')
+const $mobileProjectsLink = $('<div>')
+  .html(`<a href="projects.html"><img src="/images/projects.png" alt="projects icon"></a>`)
+  .addClass('mobile-nav-link')
+const $mobileResumeLink = $('<div>')
+  .html(`<a href="resume.html"><img src="/images/resume.png" alt="resume icon"></a>`)
+  .addClass('mobile-nav-link')
+const $mobileAboutLink = $('<div>').html(`<a href="about.html"><img src="/images/about.png" alt="about icon"></a>`)
+  .addClass('mobile-nav-link')
 const showMobileNavLinks = () => {
 
 }
@@ -251,8 +250,14 @@ $(() => {
     // }
   })
 
+// apppend mobile nave links to header on pge load
+  $mobileHomeLink.appendTo($('.mobile-link-container'));
+  $mobileProjectsLink.appendTo($('.mobile-link-container'));
+  $mobileResumeLink.appendTo($('.mobile-link-container'));
+  $mobileAboutLink.appendTo($('.mobile-link-container'));
 // mobile event listeners
   $('#mobile-menu-button').on('click', toggleMobileNav);
+
 
 
 })
