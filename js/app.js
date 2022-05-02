@@ -15,9 +15,7 @@ const $mobileResumeLink = $('<div>')
   .addClass('mobile-nav-link')
 const $mobileAboutLink = $('<div>').html(`<a href="about.html"><img src="/images/about.png" alt="about icon"></a>`)
   .addClass('mobile-nav-link')
-const showMobileNavLinks = () => {
 
-}
 
 // desktop declarations
 const showContactModal = () => {
