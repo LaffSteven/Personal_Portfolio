@@ -8,6 +8,12 @@
 }
 
 @media (max-width: 599px){
+  /**************************** hide desktop only items ****************************/
+  .contact-modal {
+    display: none;
+  }
+
+  /**************************** hide desktop only items ****************************/
   body {
     /* display: flex;
     flex-direction: column;
@@ -25,7 +31,7 @@
     background-image: url('/images/nav-bar-background-image.png');
   }
 
-  
+
 
 } /* END MOBILE FORMATTING */
 
