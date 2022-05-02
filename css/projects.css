@@ -23,28 +23,6 @@
     margin-bottom: 3em;
     background-image: url('/images/nav-bar-background-image.png');
   }
-  .nav-bar {
-    display: none;
-  }
-  .mobile-nav {
-    position: absolute;
-    top: 0;
-  }
-  .menu-button-wrapper {
-    display: flex;
-  }
-  .menu-button-wrapper h2 {
-
-    display: inline-block;
-  }
-  .nav-link-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  #mobile-nav-modal {
-    display: none;
-  }
 
   #project-article-container {
     width: 95%;
