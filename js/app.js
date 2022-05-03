@@ -1,9 +1,17 @@
 let screenWidth = $( window ).width();
+
+
 // mobile declarations
 let mobileNavVisible = false;
 const toggleMobileNav = () => {
   $('.mobile-link-container').slideToggle();
 }
+const mobileFeturedProject = () => {
+  $('#featured-paragraph').slideToggle();
+  $('#featured-read-more').toggle();
+  $('#featured-read-less').toggle();
+}
+
 
 const $mobileHomeLink = $('<div>')
   .html(`<a href="index.html"><img src="/images/home.png" alt="home icon"></a>`)
@@ -25,7 +33,11 @@ const toggleAboutText = () => {
 
 // desktop declarations
 const showContactModal = () => {
-  $('#contact-modal').show('slow');
+  if (screenWidth < 600) {
+    $('#mobile-contact-text').slideToggle('medium')
+  } else {
+    $('#contact-modal').show('slow');
+  }
 }
 const hideContactModal = () => {
   $('#contact-modal').hide('slow');
@@ -33,9 +45,6 @@ const hideContactModal = () => {
 // Project Page Modals
   // Project Page modal closers
 const hideProj1Modal = () => {
-  if (true) {
-
-  }
   $('#proj_1_modal').hide('medium');
 }
 const hideProj2Modal = () => {
@@ -159,6 +168,14 @@ const goToAbout = (url) => {
   $(location).attr('href', 'about.html');
 }
 
+const homeFeaturedProject = () => {
+  if (screenWidth < 600) {
+    mobileFeturedProject();
+  } else {
+    goToProjects();
+  }
+}
+
 
 // Home Page Project Carousel Cards
 const $projectOne = $('<a>')
@@ -233,10 +250,10 @@ $(() => {
 
   $( window ).resize( () => {
     screenWidth = $( window ).width();
-    console.log(screenWidth);
+    // console.log(screenWidth);
   })
   // Home Page Button Listeners
-  $('#project-container').on('click', goToProjects);
+  $('#project-container').on('click', homeFeaturedProject);
   $('#about-container').on('click', goToAbout);
 
   // Modal Listeners

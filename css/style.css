@@ -112,6 +112,59 @@
     text-align: center;
   }
 
+  .lower-section-block {
+    background: rgba( 200, 200, 200, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1em;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+  }
+
+  #project-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  #project-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1em;
+  }
+  #project-container h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  #featured-paragraph {
+    display: none;
+  }
+  .proj-read {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 75px;
+    background: rgba( 200, 200, 200, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1em;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  .less {
+    display: none;
+  }
+
+  #contact-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #mobile-contact-text {
+    display: none;
+  }
+
 
 } /*  End Of Mobile Formatting  */
 
@@ -124,7 +177,9 @@
   .mobile-carousel-projects {
     display: none;
   }
-
+  .mobile-only {
+    display: none;
+  }
   /****************************** general ******************************/
 
   * a:link {
