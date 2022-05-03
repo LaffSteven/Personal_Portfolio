@@ -13,26 +13,87 @@
     display: none;
   }
 
-  iframe {
+  .desktop-resume-block {
+    display: none;
+  }
+
+  .contact-modal {
     display: none;
   }
   /**************************** hide desktop only items ****************************/
   body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow: visible;
   }
 
   header {
-    height: 15%;
+    align-self: center;
+    position: absolute;
+    top: 0;
+    height: 75px;
+    width: 100%;
     margin-bottom: 3em;
+    background-image: url('/images/nav-bar-background-image.png');
   }
 
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 
-}
+  #resume-section {
+    margin-top: 4em;
+    width: 375px;
+  }
+  .mobile-resume-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-resume-block h2 {
+    max-width: 75%
+    margin-bottom: 2em;
+    background: rgba( 200, 200, 200, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1em;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: center;
+  }
+  .mobile-resume-block img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: .5em;
+  }
+  .mobile-resume-block a {
+    width: 250px;
+    margin-bottom: 2em;
+    background: rgba( 200, 200, 200, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1em;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: center;
+    margin: 0 auto;
+  }
+  .mobile-resume-block a h5 {
+
+  }
+
+} /* END OF MOBILE FORMATTING */
+
+
 @media (min-width: 600px) {
   * {
     /* border: 1px solid black; */
+  }
+
+  .mobile-only {
+    display: none;
   }
 
   body, html {
