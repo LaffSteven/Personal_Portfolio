@@ -30,10 +30,11 @@
 /**************************** hide desktop only items ****************************/
 
   body {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
     background-color: rgba(100, 100, 100, .7);
+    margin: auto;
   }
 
   header {
@@ -165,6 +166,54 @@
     display: none;
   }
 
+  #mobile-bottom-bar {
+    align-self: flex-end;
+    width: 100%;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(45, 45, 45, .6);
+    margin-top: 1em;
+  }
+
+  .bottom-bar-card {
+    margin: .25em;
+  }
+
+  #copyright-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+  }
+  #copyright-container img {
+    margin-right: .5em;
+  }
+
+  #social-links-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+  }
+  #social-links-container a {
+    margin: 0 .5em 0 .5em;
+  }
+
+  #other-links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  #other-links-container a:link, a:visited {
+    text-decoration: none;
+  }
 
 } /*  End Of Mobile Formatting  */
 
